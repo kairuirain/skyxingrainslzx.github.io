@@ -2,34 +2,29 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <title>班级服务主页</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- 新增网站图标声明 -->
+    <link rel="icon" href="data:,"> 
+    <title>学生操行分查询系统</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <a href="/index.html" class="return-home">返回首页</a>
-    <div class="container">
-        <h1>班级服务平台</h1>
-        
-        <!-- 修改申诉按钮链接 -->
-        <a href="https://www.wjx.cn/vm/wcu55lP.aspx#" class="btn appeal-btn" style="margin:20px 0">我要申诉/举报</a>
-
-        <div class="nav-box">
-            <a href="/DOWNLOAD/index.html" class="btn">下载</a>
-            <a href="/CXF/index.html" class="btn">操行分</a>
-        </div>
+    <div class="search-box">
+        <h2>学生操行分查询</h2>
+        <input type="text" id="searchName" placeholder="请输入学生姓名">
+        <button onclick="searchScore()">立即查询</button>
     </div>
 
-    <!-- 新增页脚 -->
-    <div class="footer">
-        <div class="footer-left">
-            双流中学7.7班<br>
-            运营：吴楷瑞<br>
-            网站制作：吴楷瑞<br>
-            运营平台：Github
-        </div>
-        <div class="footer-right">
-            <a href="/ABOUT/index.html">联系我？</a>
-        </div>
+    <div class="result" id="result" style="display: none;">
+        <h3 id="studentName"></h3>
+        <div class="score" id="totalScore"></div>
+        <div id="rankInfo"></div>
+        <h4>每日明细：</h4>
+        <ul class="detail-list" id="dailyDetails"></ul>
+        <div id="comment"></div>
     </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
+
+
