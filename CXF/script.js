@@ -26,6 +26,8 @@ window.searchScore = function() {
             comment.innerHTML = '<div class="positive">表现优异！继续保持！</div>';
         } else if (student.total < 0) {
             comment.innerHTML = '<div class="negative">需要加强行为规范！</div>';
+        } else if (student.total == 0) {
+            comment.innerHTML = '<div class="negative">咱们这团队Buff好像没覆盖到你？感觉你一直在挂机模式，分数没变化。</div>';
         } else {
             comment.innerHTML = '<div>有进步空间，继续努力！</div>';
         }
